@@ -1,0 +1,44 @@
+<div class="lodges">
+    <div class="lodges__inner">
+        <div class="lodges-top">
+            <h1 class="lodges-top-title">Our Lodges</h1>
+            <div class="lodges-top-desc">
+                <p class="lodges-top-desc-desc">
+                    Integer et massa nisi. Quisque fermentum leo eget sagittis aliquet. Vivamus tincidunt blandit vestibulum. Nunc vitae faucibus libero. Duis cursus arcu nec tincidunt placerat.
+                </p>
+                <p class="lodges-top-desc-desc">
+                    Integer et massa nisi. Quisque fermentum leo eget sagittis aliquet. Vivamus tincidunt blandit vestibulum. Nunc vitae faucibus libero. Duis cursus arcu nec tincidunt placerat.
+                </p>
+            </div>
+        </div>
+        <div class="lodges-bottom">
+            <div class="lodges-bottom-select">
+                <div class="lodges-bottom-select__inner" *ngFor="let f of filter">
+                    <span class="select-name">{{f.filterName}}</span>
+                    <select name="select-room" id="select-room" class="select-room">
+                        <option value="Select" class="srr" selected>Select</option>
+                        <option value="name1">{{f.srr.name1}}</option>
+                        <option value="name2">{{f.srr.name2}}</option>
+                        <option value="name3">{{f.srr.name3}}</option>
+                        <option value="name4">{{f.srr.name4}}</option>
+                    </select>
+                </div>
+            </div>
+            <div class="lodges-bottom-card">
+                <div class="lodges-bottom-card__inner" *ngFor="let apt of apertment"> 
+                    <div class="lodges-bottom-card-image">
+                        <img src="{{apt.imgUrl}}" alt="image" class="apt-image">
+                    </div>
+                    <div class="lodges-bottom-card-info">
+                        <div class="apt-name">
+                            <span class="apt-title">Apartment</span> 
+                            <span class="apt-from">From</span>
+                        </div>
+                        <p class="apt-desc">Lorem ipsum</p>
+                        <span class="apt-price">{{apt.price}}Eur</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

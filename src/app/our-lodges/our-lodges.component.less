@@ -1,0 +1,183 @@
+@min768: ~"(min-width: 768px)";
+@max767: ~"(max-width: 767px)";
+@min1025: ~"(min-width: 1025px)";
+@max1024: ~"(max-width: 1024px)";
+
+.lodges{
+    &__inner{
+        max-width: 1440px;
+        margin: 130px auto 133px;
+        padding: 0 130px;
+
+        @media @max1024 {
+            margin: 80px auto 80px;
+            padding: 0 60px;
+        }
+
+        @media @max767 {
+            margin: 80px auto 0;
+            padding: 0 30px;
+        }
+    }
+
+    &-top{
+        max-width: 1133px;
+        margin-bottom: 80px;
+
+        @media @max1024 {
+            margin-bottom: 45px;
+        }
+
+        @media @max767 {
+            margin-bottom: 50px !important;
+        }
+
+        &-title{
+            font-size: 42px;
+            font-family: var(--libre-font);
+            color: var(--title-color);
+        }
+
+        &-desc{
+            color: var(--desc-color);
+            font-family: var(--open-font);
+            display: flex;
+            gap: 58px;
+            margin-top: 54px;
+            @media @max1024 {
+                flex-direction: column;
+                gap: 30px;
+            }
+        }
+    }
+
+    &-bottom{
+        
+        &-select{
+            margin-bottom: 36px;
+            display: flex;
+            gap: 33px;
+
+            @media @max1024 {
+                gap: 23px;
+            }
+
+            @media @max767 {
+                flex-direction: column;
+                // row-gap: 12px;
+            }
+            
+            &__inner{
+                display: flex;
+                flex-direction: column;
+                flex: 1 1 270px;
+
+                @media @max767 {
+                    flex: 1 1;
+                }
+            }
+
+            .select-name{
+                font-size: 20px;
+                font-family: var(--nunito-font);
+                color: #002147;
+            }
+
+            .select-room{
+                height: 44px;
+                padding-left: 16px;
+                border: 1px solid #BDBDBD;
+                border-radius: 4px;
+                font-family: var(--nunito-font);
+                font-size: 16px;
+                color: #788696;
+            }
+        }
+
+        &-card{
+            display: flex;
+            gap: 35px;
+
+            @media @max1024 {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 22px 21px;
+            }
+
+            @media @max767 {
+                grid-template-columns: 1fr;
+                row-gap: 30px;
+            }
+            
+            &__inner{
+                border: 1px solid #BDBDBD;
+                border-radius: 6px;
+                cursor: pointer;
+                flex: 1 1 370px;
+                transition: 0.4s all;
+
+                &:hover{
+                    outline: 3px solid var(--green-color);
+
+                    .apt-price{
+                        color: var(--green-color);
+                    }
+
+                    .apt-name .apt-title{
+                        color: var(--green-color);
+                    }
+                }
+
+                .apt-image{
+                    width: 100%;
+                    height: 200px;
+                    border-radius: 6px 6px 0 0;
+                    // object-fit: cover;
+                }
+            }
+
+            &-info{
+                padding: 36px 20px 37px 20px;
+                position: relative;
+
+                .apt-name{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    .apt-title{
+                        font-size: 20px;
+                        font-family: var(--nunito-font);
+                        color: #3B5F5F;
+                        font-weight: bold;
+                        transition: 0.4s all;
+                    }
+                    .apt-from{
+                        font-size: 14px;
+                        font-family: var(--inter-font);
+                        color: #757575;
+                    }
+                }
+
+                .apt-desc{
+                    margin-top: 12px;
+                    font-size: 14px;
+                    font-family: var(--inter-font);
+                    color: #757575;
+                }
+
+                .apt-price{
+                    font-size: 20px;
+                    font-family: var(--nunito-font);
+                    color: #3B5F5F;
+                    font-weight: bold;
+                    position: absolute;
+                    right: 20px;
+                    bottom: 42px;
+                    transition: 0.4s all;
+                }
+            }
+        }
+    }
+}
+

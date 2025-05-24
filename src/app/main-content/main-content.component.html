@@ -1,0 +1,59 @@
+<div class="mc">
+    <div class="mc__inner">
+        <div class="mc-top">
+            <div class="mc-top__inner">
+                <div class="mc-top-left">
+                    <span class="mc-top-left-title">Hotel</span>
+                    <p class="mc-top-left-search">Search Hotel</p>
+                </div>
+                <p class="tab-line"></p>
+                <div class="mc-top-right">
+                    <hr class="line-hr desk-line" >
+                    <div class="mc-top-right-check">
+                        <div class="check-in">
+                            <span class="check-in-title">Check-in</span>
+                            <span class="check-in-select">Select</span>
+                        </div>
+                        <div class="hypen"><hr style="width: 15px; opacity: 0.75; margin-top: 5px;"></div>
+                        <div class="check-in">
+                            <span class="check-in-title">Check-out</span>
+                            <span class="check-in-select">Select</span>
+                        </div>
+                    </div>
+                    <p class="phone-line"></p>
+                    <hr class="line-hr mobile-line">
+                    <div class="mc-top-right-persons">
+                        <span class="num-persons">Number of Persons</span>
+                        <div class="sliding">
+                            <div class="sliding-left sliding-slide" (click)="decrese()">
+                                <img src="../../assets/arrow.svg" alt="arrow" class="sliding-arrow rotating">
+                            </div>
+                            <div class="sliding-num">{{num}}</div>
+                            <div class="sliding-right sliding-slide" (click)="increse()">
+                                <img src="../../assets/arrow.svg" alt="arrow" class="sliding-arrow">
+                            </div>
+                        </div>
+                    </div>
+                    <p class="phone-line"></p>
+                    <hr class="line-hr desk-line">
+                    <div class="mc-top-right-btn">
+                        <button type="button" class="btn btn-order-now">Order Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mc-image">
+            <img src="../../assets/pexels-pixabay-147411.jpg" alt="image" class="mc-image-image">
+        </div>
+        <div class="view-center">
+            <div class="mc-view">
+                <h1 class="mc-view-title">Mountain View</h1>
+                <p class="mc-view-desc">Quisque imperdiet faucibus nunc, euismod pulvinar magna consequat sit amet. Cras blandit lobortis feugiat. Nunc justo nisl, tristique eget semper in, tristique vel turpis. In blandit augue justo.</p>
+                <div class="mc-view-link">
+                    <a class="mc-view-learn-more">Learn More</a>
+                    <img src="../../assets/green-arrow.png" alt="arrow" class="mc-view-arrow">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

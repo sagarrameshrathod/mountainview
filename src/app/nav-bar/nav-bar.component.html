@@ -1,0 +1,137 @@
+<div class="nav-bar" *ngIf="nav">
+    <div class="nav-bar__inner">
+        <div class="nav-bar-left">
+            <span class="nav-bar-left-logo">Mountain Lodge</span>
+        </div>
+        <div class="nav-bar-center">
+            <ul class="nav-bar-center__inner">
+                <li class="nav-bar-center-list">Home</li>
+                <li class="nav-bar-center-list">About</li>
+                <li class="nav-bar-center-list">Gallery</li>
+                <li class="nav-bar-center-list adventures-list" (click)="openPopup()">
+                    <span>Adventures</span>
+                    <img src="../../assets/arrow.png" alt="img" class="adventures-arrow"> 
+                </li>
+                <li class="nav-bar-center-list">Contact</li>
+            </ul>
+        </div>
+        <div class="nav-bar-right">
+            <img src="../../assets/search.png" alt="search" class="nav-bar-right-search">
+            <img src="../../assets/menu-bar.png" alt="menu" class="menu-open" *ngIf="openNav" (click)="openMenu()">
+        </div>
+    </div>
+</div>
+
+<div class="popup" *ngIf="open">
+    <div class="popup__inner">
+        <div class="popup__info">
+            <div class="popup__scroll">
+                <ul class="popup__scroll__grid" >
+                    <li class="popup__scroll__grid__list" *ngFor="let s of scrollInfo">{{s.type}}</li>
+                </ul>
+            </div>
+            <div class="popup__items">
+                <ul class="popup__items__lists" *ngFor="let info of popupInfo">
+                    <li class="popup__items__lists__list">{{info.name1}}</li>
+                    <li class="popup__items__lists__list">{{info.name2}}</li>
+                    <li class="popup__items__lists__list">{{info.name3}}</li>
+                    <li class="popup__items__lists__list">{{info.name4}}</li>
+                    <li class="popup__items__lists__list">{{info.name5}}</li>
+                </ul>
+            </div>
+        </div>
+        <hr class="hr-line">
+        <div class="popup__images">
+            <div class="popup__images__info" *ngFor="let image of popupImages">
+                <img src="{{image.imgUrl}}" alt="img" class="popup--image">
+                <span class="hover--text">{{image.name}}</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="mob" *ngIf="mob">
+    <div class="mob__inner">
+        <div class="mob-nav">
+            <span class="mob-logo">Mountain Lodge</span>
+            <img src="../../assets/close-menu.png" alt="close" class="mob-close" (click)="openMenu()">
+        </div>
+        <ul class="mob__lists">
+            <li class="mob-list">Home</li>
+            <li class="mob-list">About</li>
+            <li class="mob-list">Gallery</li>
+            <li class="mob-list mob-adv">
+                <span>Adventures</span>
+                <img src="../../assets/arrow.png" alt="img" class="mob-arrow" (click)="openIn()"> 
+            </li>
+            <li class="mob-list">Contact</li>
+        </ul>
+    </div>
+</div>
+
+<div class="m-pop" *ngIf="inside">
+    <div class="m-pop__inner">
+        <div class="m-pop__nav">
+            <span class="m-pop-logo">Mountain Lodge</span>
+            <img src="../../assets/close-menu.png" alt="close" class="m-pop-close" (click)="openMenu1()">
+        </div>
+        <div class="m-pop__back" (click)="backIn()" *ngIf="types">
+            <img src="../../assets/arrow.svg" alt="back" class="back-image">
+            <span class="back-btn">Back to main menu</span>
+        </div>
+        <div class="activity" *ngIf="activity">
+            <div class="activity__btn" (click)="backTypes()">
+                <img src="../../assets/arrow.svg" alt="back" class="activities-icon">
+                <span class="activities-name">Activities</span>
+            </div>
+            <div class="activity__main" *ngIf="act1">
+                <ul  *ngFor="let t1 of type1">
+                    <li class="activities-list">{{t1.name}}</li>
+                </ul>
+            </div>
+            <div class="activity__main" *ngIf="act2">
+                <ul  *ngFor="let t1 of type2">
+                    <li class="activities-list">{{t1.name}}</li>
+                </ul>
+            </div>
+            <div class="activity__main" *ngIf="act3">
+                <ul  *ngFor="let t1 of type3">
+                    <li class="activities-list">{{t1.name}}</li>
+                </ul>
+            </div>
+            <div class="activity__main" *ngIf="act4">
+                <ul  *ngFor="let t1 of type4">
+                    <li class="activities-list">{{t1.name}}</li>
+                </ul>
+            </div>
+        </div>
+        <div class="m-pop__info" *ngIf="types">
+                <div class="m-pop__list">
+                    <span class="m-pop__title">Sports</span>
+                    <img src="../../assets/arrow.png" alt="icon" class="arrow-icon" (click)="activity1()">
+                </div>
+                <div class="m-pop__list">
+                    <span class="m-pop__title">Leisure</span>
+                    <img src="../../assets/arrow.png" alt="icon" class="arrow-icon" (click)="activity2()">
+                </div>
+                <div class="m-pop__list">
+                    <span class="m-pop__title">Extreme</span>
+                    <img src="../../assets/arrow.png" alt="icon" class="arrow-icon" (click)="activity3()">
+                </div>
+                <div class="m-pop__list">
+                    <span class="m-pop__title">Kids</span>
+                    <img src="../../assets/arrow.png" alt="icon" class="arrow-icon" (click)="activity4()">
+                </div>
+                <div class="m-pop__list">
+                    <span class="m-pop__title">Elderly</span>
+                    <img src="../../assets/arrow.png" alt="icon" class="arrow-icon">
+                </div>
+        </div>
+        <div class="m-pop__image">
+            <div class="m-pop__image__info" *ngFor="let image of popupImages">
+                <img src="{{image.imgUrl}}" alt="img" class="m-pop--image">
+                <span class="m-pop-text">{{image.name}}</span>
+            </div>
+        </div>
+    </div>
+</div>

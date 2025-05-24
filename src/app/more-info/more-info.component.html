@@ -1,0 +1,68 @@
+<div class="more-info">
+    <div class="more-info__inner">
+        <div class="visite">
+            <div class="visite__inner" *ngFor="let v of visite">
+                <div class="visite__image">
+                    <img src="{{v.imgUrl}}" alt="image" class="visite__image--image">
+                </div>
+                <div class="visite__info">
+                    <h3 class="visite__info__title">{{v.title}}</h3>
+                    <p class="visite__info__desc">{{v.desc}}</p>
+                    <div class="visite__info__link">
+                        <a class="visite__info__link--success">Learn More</a>
+                        <img src="../../assets/green-arrow.png" alt="arrow" class="visite__info__link--image">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="renters">
+            <div class="renters__inner">
+                <h1 class="renters__title">What our renters have to say</h1>
+                <p class="renters__desc">In nec tempor augue. Maecenas varius nulla lacus, et cursus lacus rutrum quis. Fusce sodales, nulla at gravida viverra, nibh nisl sodales.
+                </p>
+                <div class="renters__about">
+                    <div class="renters-info">
+                        <span class="renters-info__desc">
+                           {{about}}
+                        </span>
+                        <h3 class="renters-info__name">{{name}}</h3>
+                        <p class="renters-info__title">{{title}}</p>
+                    </div>
+                    <div class="renters-slider">
+                        <div class="renters__slider__left" (click)="leftClick()">
+                            <img src="../../assets/arrow_right.png" alt="img" class="renters-slider__arrow arrow-left--rotate">
+                        </div>
+                        <div class="renters__slider__right" (click)="rightClick()">
+                            <img src="../../assets/arrow_right.png" alt="img" class="renters-slider__arrow">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="adventure">
+            <div class="adventure__inner">
+                <div class="adventure__main">
+                    <h1 class="adventure__main__title">Adventure Packs</h1>
+                    <p class="adventure__main__desc">In nec tempor augue. Maecenas varius nulla lacus. Duis et mollis diam, nec.</p>
+                </div>
+                <div class="adventure__info">
+                    <div class="adventure__info__box">
+                        <img src="../../assets/calender.png" alt="img" class="adventure__info__image">
+                        <h3 class="adventure__info__title">Year Long Packs</h3>
+                        <p class="adventure__info__desc">In nec tempor augue. Maecenas varius nulla lacus, et cursus lacus.</p>
+                    </div>
+                    <div class="adventure__info__box">
+                        <img src="../../assets/money.png" alt="img" class="adventure__info__image money--img">
+                        <h3 class="adventure__info__title">Save Money</h3>
+                        <p class="adventure__info__desc">Mauris pulvinar metus diam, sit amet fermentum velit ullamcorper.</p>
+                    </div>
+                    <div class="adventure__info__box">
+                        <img src="../../assets/time.png" alt="img" class="adventure__info__image">
+                        <h3 class="adventure__info__title">Organize Now</h3>
+                        <p class="adventure__info__desc">Vivamus lorem metus, maximus hendrerit viverra non, tempus.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
